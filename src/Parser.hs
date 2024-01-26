@@ -1,6 +1,8 @@
 {-# LANGUAGE LambdaCase #-}
 
 module Parser where
+    -- The parser is written using the nanoparsec library developed in write you a haskell tutorial by Stephen Diehl
+    -- Link to the original: https://smunix.github.io/dev.stephendiehl.com/fun/002_parsers.html
     import Data.Char
     import Token
     import Control.Monad ( MonadPlus(..), ap, liftM )
