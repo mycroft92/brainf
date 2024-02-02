@@ -6,7 +6,7 @@ module Lib
     ) where
 
 import Parser
-import Evaluator (runProgram)
+import Evaluator2 (runProgram)
 import Data.Char (isSpace)
 import Data.List (dropWhileEnd)
 
