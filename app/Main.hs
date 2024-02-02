@@ -5,6 +5,7 @@ import System.Environment
 import System.IO
 import qualified System.Exit as Exit
 
+
 main :: IO ()
 main = do
         args <- getArgs
@@ -13,8 +14,9 @@ main = do
 
         if null args
             then do
-                    putStrLn "Usage: brainfuckhask <file.bf>"
-                    Exit.exitSuccess
+                    hSetBuffering stdout NoBuffering
+                    putStrLn "Interpreter mode. Empty line exits the mode."
+                    runPrompt
             else do 
                     putStrLn $ "Running program "++ head args
                     runFile $ head args
